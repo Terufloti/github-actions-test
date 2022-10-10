@@ -7,11 +7,11 @@ on:
       - "feature/*" #pasuje do wszystkiego co z feature/ na poczatku, np. feature/fdnhkjasbhkj itd. Nie pasuje do np. feature/dsadas/dsad
       - "feature/**" #pasuje nawet do feature/dsad/dasd
       - "!feature/featC" 
-    tags:
-      - v1.*
-    paths:
-      - "**.js"
-      - "!filename.js"
+    #tags:
+    #  - v1.*
+    #paths:
+    #  - "**.js"
+    #  - "!filename.js"
 
     #repository_dispatch: 
       #types: [build]
