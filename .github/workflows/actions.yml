@@ -1,8 +1,20 @@
 name: Actions Workflow
 
 on:
-  repository_dispatch: 
-    types: [build]
+  push:
+    branches:
+      - master
+      - "feature/*" #pasuje do wszystkiego co z feature/ na poczatku, np. feature/fdnhkjasbhkj itd. Nie pasuje do np. feature/dsadas/dsad
+      - "feature/**" #pasuje nawet do feature/dsad/dasd
+      - "!feature/featC" 
+    tags:
+      - v1.*
+    paths:
+      - "**.js"
+      - "!filename.js"
+
+    #repository_dispatch: 
+      #types: [build]
     # schedule:
     # - cron: "0 12 * * *"                                                                                          * * * *"
     # 1. * = minuta
